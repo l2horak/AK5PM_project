@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'year',
     loadChildren: () => import('./year/year.module').then( m => m.YearPageModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
   }
 ];
 @NgModule({

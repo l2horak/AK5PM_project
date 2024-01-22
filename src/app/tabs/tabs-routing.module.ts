@@ -4,7 +4,7 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: 'numbers',
     component: TabsPage,
     children: [
       {
@@ -16,19 +16,19 @@ const routes: Routes = [
         loadChildren: () => import('../year/year.module').then(m => m.YearPageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'history',
+        loadChildren: () => import('../history/history.module').then(m => m.HistoryPageModule)
       },
       {
         path: '',
-        redirectTo: '/tabs/random',
+        redirectTo: '/numbers/random',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/random',
+    redirectTo: '/numbers/random',
     pathMatch: 'full'
   }
 ];
