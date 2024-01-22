@@ -10,6 +10,7 @@ import { GetNumbersApiDataService } from '../services/get-numbers-api-data.servi
 export class RandomPage implements OnInit {
 
   numbersRandomOutput$: Observable<any> = this.apiService.getRandomNumber()
+  displayData: string = "42 is the answer to the Ultimate Question of Life, the Universe, and Everything."
 
   constructor(private apiService: GetNumbersApiDataService) { }
 
@@ -18,7 +19,7 @@ export class RandomPage implements OnInit {
 
   generateRandom(){
     this.numbersRandomOutput$.subscribe(data => {
-      console.log(data.text)
+      this.displayData = data.text
     })
   }
 }
