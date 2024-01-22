@@ -13,4 +13,12 @@ export class GetNumbersApiDataService {
     let url = 'http://numbersapi.com/random/trivia?json'
     return this.http.get(url)
   }
+
+  getYear(userInput: String) : Observable<any>{
+    if(userInput){
+      let url = `http://numbersapi.com/${userInput}/year?json`
+      return this.http.get(url)
+    }
+    return of(null)
+  }
 }
