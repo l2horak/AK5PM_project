@@ -10,10 +10,17 @@
       <ion-title size="large">History</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  
   <ion-list>
     <ion-item *ngFor="let history of storedData">
       <ion-label>{{ history }}</ion-label>
     </ion-item>
   </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let history of storedYears">
+      <ion-label>{{ history }}</ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

@@ -28,7 +28,7 @@ export class YearPage implements OnInit {
         this.displayData = data.text
         this.displayYear = data.number
         this.historyArray.unshift(data.text)
-        this.storage.set('history', JSON.stringify(this.historyArray))
+        this.storage.set('historyYears', JSON.stringify(this.historyArray))
       })
     } 
   }
