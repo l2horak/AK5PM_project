@@ -10,4 +10,29 @@
       <ion-title size="large">Specific Year Trivia</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card class="ion-padding">
+    <ion-card-title>Enter the year of interest:</ion-card-title>
+    <!-- <ion-card-subtitle>subtitle</ion-card-subtitle> -->
+      <ion-card-content>
+        <ion-input
+        type="text"
+        fill="solid"
+        label="Year"
+        labelPlacement="floating"
+        helperText="Enter the searched year"
+        errorText=""
+        [(ngModel)]="year"
+      ></ion-input>
+      <ion-button (click)="searchYear()" expand="block">Search</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="ion-padding">
+      <ion-card-title>Year 1989</ion-card-title>
+      <!-- <ion-card-subtitle>subtitle</ion-card-subtitle>  -->
+        <ion-card-content>
+          {{ output }}
+        </ion-card-content>
+    </ion-card>
 </ion-content>

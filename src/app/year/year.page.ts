@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YearPage implements OnInit {
 
+  year: string = ''
+  output: string = ""
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  searchYear(){
+    this.output = "clicked"
+  }
 }
