@@ -12,8 +12,8 @@ const routes: Routes = [
         loadChildren: () => import('../random/random.module').then(m => m.RandomPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'year',
+        loadChildren: () => import('../year/year.module').then(m => m.YearPageModule)
       },
       {
         path: 'tab3',

@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'random',
     loadChildren: () => import('./random/random.module').then( m => m.RandomPageModule)
+  },
+  {
+    path: 'year',
+    loadChildren: () => import('./year/year.module').then( m => m.YearPageModule)
   }
 ];
 @NgModule({
