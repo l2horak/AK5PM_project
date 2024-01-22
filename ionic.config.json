@@ -1,0 +1,7 @@
+{
+  "name": "AK5PM_project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
