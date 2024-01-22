@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { GetNumbersApiDataService } from '../services/get-numbers-api-data.service';
 
 @Component({
   selector: 'app-random',
@@ -7,12 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RandomPage implements OnInit {
 
-  constructor() { }
+  numbersRandomOutput$: Observable<any> = this.apiService.getRandomNumber()
+
+  constructor(private apiService: GetNumbersApiDataService) { }
 
   ngOnInit() {
   }
 
   generateRandom(){
-    console.log("test")
+    this.numbersRandomOutput$.subscribe(data => {
+      console.log(data.text)
+    })
   }
 }
