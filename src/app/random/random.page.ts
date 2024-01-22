@@ -12,4 +12,7 @@ export class RandomPage implements OnInit {
   ngOnInit() {
   }
 
+  generateRandom(){
+    console.log("test")
+  }
 }

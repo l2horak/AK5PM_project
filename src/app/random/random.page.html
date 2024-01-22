@@ -10,4 +10,17 @@
       <ion-title size="large">Random Number Trivia</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card class="ion-padding">
+    <ion-card-title>Interesting fact about random number</ion-card-title>
+    <!-- <ion-card-subtitle>subtitle</ion-card-subtitle> -->
+      <ion-card-content>
+        42 is the year that Suro becomes the first king of Geumgwan Gaya in the Korean peninsula.
+        42 is the number of gallons that one barrel of petroleum holds.
+      </ion-card-content> 
+  </ion-card>
+
+  <div class="ion-text-center">
+      <ion-button (click)="generateRandom()">Generate Random Trivia</ion-button>
+  </div>
 </ion-content>
